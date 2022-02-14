@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+</head>
+<body>
+    <h1>文件上传</h1>
+    <p>请将上传的文件控制在20kb以下，且后缀名为xls或xlxs</p>
+    <form action="" enctype='multipart/form-data' method='POST'>
+         <input type="file" name="file">
+         <input type="submit" value="上传">
+     </form>
+
+    <p>xlsx实例 将名单放置A列下</p>
+    <img src="{{url_for('static', filename='example.png')}}"alt="你的图片被外星人劫持了～～"/>
+ </body>
+ </html>

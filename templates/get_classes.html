@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择查询班级</title>
+</head>
+<body>
+    <h1>班级选择</h1>
+    <p> 仅支持已导入班级的查询，如需导入班级数据，请于网站管理员联系。</p>
+    
+    <div id="content" style="background-color:#28662d;height:400px;width:500px;float:left;">
+        {{classes}}
+    </div>
+
+    <form action="https://localhost:444/upload">
+        <select name="class">
+            
+        {{options | safe}}
+
+        <input type="submit" value="确定">
+        </select>
+    </form>
+    
+
+
+ </body>
+ </html>
