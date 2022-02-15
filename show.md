@@ -60,10 +60,22 @@ https://www.cnpython.com/qa/324090
 逻辑： 
 查看已经导入的班级并选择（加入cookies）->
 上传文件（根据cookies命名）->
+show(cookies)
+
+记录：
+关于return字典，因为在源头上就是用的return f"{classes}"这里就已经决定了是str类型而不是字典，为什么会这样呢。是因为当时会f""的用法在平时多加练习。
+
+通过 render_template()函数 传入html元素{{options}} 同一个html文件，前面的{{classees}}可以正常使用，但options就是带字符""的元素 无法作为html元素。
+解决：引用过滤器 {{options | safe}}
+
+在cookies的使用时 无法获取
+解决：cookies是针对单一请求的/后面的一边就不同请求了建议使用sessions
 
 
 前言:
-本网站是基于作者遇到的...
+本网站是基于作者遇到的查询班级青年大学习完成情况所遇到的种种困难， 本着自己所学， 所钻研所得的成果。
+
+技术无罪，侵权必删。
 
 
  更新记录
