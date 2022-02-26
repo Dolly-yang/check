@@ -8,15 +8,19 @@ import time
 app = Flask(__name__)
 
 app.secret_key = b'Z\x8e\xbdp\xd7\xe0\x8a\xec5\xc1\x8a\xa1\x19m\x11\x9a'
+app.config['MAX_CONTENT_LENGTH'] = 20 * (1024 * 1000) # 字节 = 20 * 1b *1000
 
 @app.errorhandler(404)
 def not_found(error):
     return render_template('404.html'), 404
 
-
 # 装饰器
+@app.route("/", methods = ['GET'])
+def index():
+    return redirect(url_for('get_classes'))
+
 @app.route("/get_classes", methods=['GET'])
-def get():
+def get_classes():
     session['user'] = str(int(time.time()))
 
     classes = mainV1.get_classes()
