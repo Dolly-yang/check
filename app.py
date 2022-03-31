@@ -8,7 +8,6 @@ import time
 app = Flask(__name__)
 
 app.secret_key = b'Z\x8e\xbdp\xd7\xe0\x8a\xec5\xc1\x8a\xa1\x19m\x11\x9a'
-app.config['MAX_CONTENT_LENGTH'] = 20 * (1024 * 1000) # 字节 = 20 * 1b *1000
 
 @app.errorhandler(404)
 def not_found(error):
@@ -69,6 +68,6 @@ def show():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=444, ssl_context=('key/secret.pem', 'key/secret.key'))
+    app.run(host='0.0.0.0', port=450, ssl_context=('key/secret.pem', 'key/secret.key'))
     
 # flask添加https支持，只需要在app.run中添加ssl_context参数。

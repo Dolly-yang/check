@@ -69,7 +69,7 @@ show(cookies)
 解决：引用过滤器 {{options | safe}}
 
 在cookies的使用时 无法获取
-解决：cookies是针对单一请求的/后面的一边就不同请求了建议使用sessions
+解决：cookies是针对单一请求的/后面的一变就不同请求了建议使用sessions
 
 
 前言:
@@ -82,4 +82,4 @@ show(cookies)
 v1.0    2022.01.01
 基本功能的实现 ：但技术复杂散乱 文件上传（php）check（python）   具有一定的小bug
 v1.1    2022.02.12
-用flask框架重构 羡慕逻辑优化 优化无用代码
+用flask框架重构 项目逻辑优化 优化无用代码

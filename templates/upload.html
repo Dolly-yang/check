@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>文件上传</title>
 
 </head>
-
 <body>
     <h1>文件上传</h1>
     <p>请将上传的文件控制在20kb以下，且后缀名为xls或xlxs</p>
     <form action="" enctype='multipart/form-data' method='POST'>
-        <input type="file" name="file">
-        <input type="submit" value="上传">
-    </form>
+         <input type="file" name="file">
+         <input type="submit" value="上传">
+     </form>
 
     <p>xlsx实例 将名单放置A列下(其余列的数据不会影响)</p>
-    <img src="{{url_for('static', filename='example.png')}}" alt="你的图片被外星人劫持了～～" />
-
-    <a href="{{url_for('static', filename='bin.mt.plus.apk')}}" target="_self">mt管理器.apk获取</a>
+    <img src="{{url_for('static', filename='example.png')}}"alt="你的图片被外星人劫持了～～"/>
+    
+    <a href="{{url_for('static', filename='bin.mt.plus.apk')}}" target="_self">mt管理器.apk获取</a> 
 
     <br>
 
     <a href="{{url_for('static', filename='exampl_video.mp4')}}" target="_self">初代参考视频</a>
-
+    
     <p>上述视频为一步步进入路径，为了方便可直接点击mt管理器顶部输入一下路径，然后按日期排下序。</p>
     <p>
         手机QQ接收文件路径：
     </p>
-    <p>
-        ----/storage/emulated/0/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/
-    </p>
+<p>
+----/storage/emulated/0/Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/
+</p>
     <hr>
     <p>
         相对根目录的路径&nbsp;&nbsp;Android/data/com.tencent.mobileqq/Tencent/QQfile_recv/
     </p>
-
-</body>
-
-</html>
+ </body>
+ </html>

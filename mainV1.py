@@ -27,8 +27,9 @@ def show(chosed_class, username):
     sheet_name2 = xl2.sheet_names()[0]
     data1 = xl2.sheet_by_name(sheet_name2)
     set_set1 = set(data1.col_values(0))
-
-    class_name = classes[int(chosed_class)]
+    
+    t = classes[int(chosed_class)]
+    class_name = t.split('.')[0]
 # 主要利用集合操作 并差交补|-&^
 #
 #     print(f"未完成：{set_all - set_set1}")  # 未完成的
@@ -36,4 +37,4 @@ def show(chosed_class, username):
 # # print(d_set_all ^ d_set1)  # 未完成的和非本班的
 #     print(f"非本班：{(set_all ^ set_set1) - (set_all - set_set1)}")
 
-    return f"{class_name[:-5]}---未完成：{set_all - set_set1}" #  + '<p>' + f"非本班：{(set_all ^ set_set1) - (set_all - set_set1)}"
+    return f"{class_name}---未完成：{set_all - set_set1}" #  + '<p>' + f"非本班：{(set_all ^ set_set1) - (set_all - set_set1)}"
